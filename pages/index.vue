@@ -1,6 +1,6 @@
 <template>
   <div>
-    <NuxtWelcome />
+    C'est La Vue - Nuxt 3
   </div>
 </template>
 
