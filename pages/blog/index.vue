@@ -2,9 +2,7 @@
   <div>
     The Blog
 
-    <li v-for="post of data" :key="post._path">
-      <NuxtLink :to="post._path">{{post.title}}</NuxtLink>
-    </li>
+    <PostList :posts="data" />
   </div>
 </template>
 
