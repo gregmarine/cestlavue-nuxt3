@@ -1,11 +1,9 @@
 <template>
-  <NuxtLink :to="`/tags/${tag}`">
-    {{tag}}
+  <NuxtLink :to="`/tags/${props.tag}`">
+    {{props.tag}}
   </NuxtLink>
 </template>
 
-<script>
-  export default {
-    props: ['tag']
-  }
+<script setup>
+  const props = defineProps(['tag']);
 </script>

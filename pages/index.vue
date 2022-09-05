@@ -1,9 +1,16 @@
 <template>
-  <div>
-    <Head>
-      <Title>Welcome to C'est La Vue - Nuxt 3</Title>
-      <Script src="https://identity.netlify.com/v1/netlify-identity-widget.js" />
-    </Head>
+  <main>
     C'est La Vue - Nuxt 3
-  </div>
+  </main>
 </template>
+
+<script setup>
+  useHead({
+    title: "Welcome to C'est La Vue - Nuxt 3",
+    script: [
+      {
+        src: "https://identity.netlify.com/v1/netlify-identity-widget.js"
+      }
+    ]
+  });
+</script>
