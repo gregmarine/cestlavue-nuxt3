@@ -1,9 +1,10 @@
 ---
 title: Hello Blog!
 date:
-description: An example blog post for C'est La Vue
 tags:
   - hello
 ---
 
-*Hello Blog!*
+*Hello Blog as a post!*
+<!--more-->
+Here is more content for the post.
