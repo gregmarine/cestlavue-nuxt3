@@ -5,7 +5,7 @@
       <Script src="https://identity.netlify.com/v1/netlify-identity-widget.js" />
     </Head>
     
-    <div class="hero min-h-screen" :style="`background-image: url(/images/${ data.hero_image });`">
+    <div class="hero min-h-screen" :style="`background-image: url(${ data.hero_image });`">
       <div class="hero-overlay bg-opacity-60"></div>
       <div class="hero-content text-center text-neutral-content">
         <div class="max-w-md">
