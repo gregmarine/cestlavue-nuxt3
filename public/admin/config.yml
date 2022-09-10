@@ -24,7 +24,7 @@ collections:
     folder: content/blog
     format: frontmatter
     create: true
-    slug: {{slug}}
+    slug: '{{slug}}'
     editor:
       preview: false
     fields:
