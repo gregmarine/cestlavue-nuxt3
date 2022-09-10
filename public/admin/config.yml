@@ -5,9 +5,11 @@ backend:
 # Publish mode https://www.netlifycms.org/docs/configuration-options/#publish-mode
 publish_mode: editorial_workflow
 
-media_folder: static/img
-public_folder: /img
+# Media and Public Folders https://www.netlifycms.org/docs/configuration-options/#media-and-public-folders
+media_folder: public/images
+public_folder: /images
 
+# Collections https://www.netlifycms.org/docs/configuration-options/#collections
 collections:
   - label: Settings
     name: settings
