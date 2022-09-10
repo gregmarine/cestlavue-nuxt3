@@ -1,11 +1,5 @@
 <template>
-  <header>
-    <Header />
-  </header>
-  <main>
+  <div>
     <NuxtPage />
-  </main>
-  <footer>
-    <Footer />
-  </footer>
+  </div>
 </template>

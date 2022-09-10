@@ -1,5 +1,11 @@
 <template>
-  <div>
-    This will be the header
-  </div>
+  <header>
+    <div class="navbar bg-base-100 shadow-xl">
+      {{props.title}}
+    </div>
+  </header>
 </template>
+
+<script setup>
+  const props = defineProps(['title']);
+</script>

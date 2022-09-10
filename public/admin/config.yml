@@ -9,17 +9,27 @@ media_folder: static/img
 public_folder: /img
 
 collections:
-  - name: 'blog'
-    label: 'Blog'
-    folder: 'content/blog'
-    format: 'frontmatter'
+  - label: Settings
+    name: settings
+    files:
+      - label: General
+        name: general
+        format: frontmatter
+        file: content/settings/general.md
+        fields:
+          - { label: Title, name: title, widget: string }
+
+  - label: Blog
+    name: blog
+    folder: content/blog
+    format: frontmatter
     create: true
-    slug: '{{slug}}'
+    slug: {{slug}}
     editor:
       preview: false
     fields:
-      - { label: 'Title', name: 'title', widget: 'string' }
-      - { label: 'Publish Date', name: 'date', widget: 'datetime' }
-      - { label: 'Description', name: 'description', widget: 'string' }
-      - { label: 'Body', name: 'body', widget: 'markdown' }
-      - { label: "Tags", name: "tags", widget: "list" }
+      - { label: Title, name: title, widget: string }
+      - { label: Publish Date, name: date, widget: datetime }
+      - { label: Description, name: description, widget: string }
+      - { label: Body, name: body, widget: markdown }
+      - { label: Tags, name: tags, widget: list }

@@ -1,16 +1,14 @@
 <template>
-  <main>
+  <div>
+    <Head>
+      <Title>{{ data.title }}</Title>
+      <Script src="https://identity.netlify.com/v1/netlify-identity-widget.js" />
+    </Head>
+    <Header :title="data.title" />
     C'est La Vue - Nuxt 3
-  </main>
+  </div>
 </template>
 
 <script setup>
-  useHead({
-    title: "Welcome to C'est La Vue - Nuxt 3",
-    script: [
-      {
-        src: "https://identity.netlify.com/v1/netlify-identity-widget.js"
-      }
-    ]
-  });
+  const { data } = await useAsyncData('settings', () => queryContent('/settings/general').only(['_path', 'title']).findOne());
 </script>
