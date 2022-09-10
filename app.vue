@@ -1,9 +1,11 @@
 <template>
-  <ion-app>
+  <header>
+    <Header />
+  </header>
+  <main>
     <NuxtPage />
-  </ion-app>
+  </main>
+  <footer>
+    <Footer />
+  </footer>
 </template>
-
-<script setup>
-  import { IonApp } from "@ionic/vue";
-</script>
