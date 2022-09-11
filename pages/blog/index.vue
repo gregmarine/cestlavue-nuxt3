@@ -1,8 +1,10 @@
 <template>
-  <div>
-    The Blog
+  <div class="flex flex-col h-screen">
+    <Header title="Blog" />
 
-    <PostRoll :posts="data" />
+    <div class="container mx-auto h-full max-h-screen overflow-y-auto pt-8">
+      <PostRoll :posts="data" />
+    </div>
   </div>
 </template>
 
