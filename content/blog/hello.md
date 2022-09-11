@@ -1,6 +1,7 @@
 ---
 title: Hello Blog!
-date:
+date: 2022-09-11T20:51:06.233Z
+featured_image: /images/dsc03276.jpeg
 tags:
   - hello
 ---
