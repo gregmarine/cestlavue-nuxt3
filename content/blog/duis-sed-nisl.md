@@ -1,6 +1,7 @@
 ---
 title: Duis sed nisl
 date: 2022-09-11T18:41:06.898Z
+featured_image: /images/dsc03391.jpeg
 ---
 Aliquam non diam nulla. Phasellus diam ligula, lobortis non scelerisque sed, eleifend sit amet orci. Praesent ut metus vitae ante molestie commodo quis in velit. Morbi a turpis lacinia, aliquam sem vel, fringilla felis. Sed nec leo nisl. Integer sodales felis dui, at dapibus massa congue eget. Maecenas porta porta neque et finibus. Pellentesque egestas dui velit, id congue quam hendrerit vitae.
 
