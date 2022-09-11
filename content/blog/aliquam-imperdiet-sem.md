@@ -1,6 +1,7 @@
 ---
 title: Aliquam imperdiet sem
 date: 2022-09-11T18:36:54.320Z
+featured_image: /images/dsc03319.jpeg
 tags:
   - Photography
   - Hobbies
