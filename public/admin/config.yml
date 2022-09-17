@@ -24,13 +24,13 @@ collections:
           - { label: Title, name: title, widget: string }
           - { label: Hero Image, name: hero_image, widget: image }
 
-      - label: Collections
-        name: collections
+      - label: Blog
+        name: blog
         format: frontmatter
-        file: content/settings/collections.md
+        file: content/settings/blog.md
         fields:
-          - { label: Blog Title, name: blog_title, widget: string }
-          - { label: Blog Intro, name: blog_intro, widget: markdown }
+          - { label: Title, name: blog_title, widget: string }
+          - { label: Body, name: body, widget: markdown }
 
   - label: Blog
     name: blog
