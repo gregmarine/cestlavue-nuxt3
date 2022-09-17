@@ -29,7 +29,7 @@ collections:
         format: frontmatter
         file: content/settings/blog.md
         fields:
-          - { label: Title, name: blog_title, widget: string }
+          - { label: Title, name: title, widget: string }
           - { label: Body, name: body, widget: markdown }
 
   - label: Blog
