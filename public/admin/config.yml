@@ -22,6 +22,9 @@ collections:
         file: content/settings/general.md
         fields:
           - { label: Title, name: title, widget: string }
+          - { label: Subtitle, name: sub_title, widget: string }
+          - { label: Hero Message, name: hero_message, widget: string }
+          - { label: Call to Action Text, name: cta_text, widget: string }
           - { label: Hero Image, name: hero_image, widget: image }
 
       - label: Blog

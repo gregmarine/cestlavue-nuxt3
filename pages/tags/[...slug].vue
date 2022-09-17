@@ -1,13 +1,13 @@
 <template>
   <div>
     Posts tagged with {{ route.params.slug[0] }}
-    <PostRoll :posts="data" />
+    <BlogRoll :posts="posts" />
   </div>
 </template>
 
 <script setup lang="ts">
   const route = useRoute();
-  const { data } = await useAsyncData('posts', () => queryContent().where({
+  const posts = await queryContent().where({
     tags: { $contains: route.params.slug },
-  }).sort({ date: 1 }).find());
+  }).sort({ date: 1 }).find();
 </script>
