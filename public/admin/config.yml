@@ -24,6 +24,14 @@ collections:
           - { label: Title, name: title, widget: string }
           - { label: Hero Image, name: hero_image, widget: image }
 
+      - label: Collections
+        name: collections
+        format: frontmatter
+        file: content/settings/collections.md
+        fields:
+          - { label: Blog Title, name: blog_title, widget: string }
+          - { label: Blog Intro, name: blog_intro, widget: markdown }
+
   - label: Blog
     name: blog
     folder: content/blog
@@ -35,6 +43,6 @@ collections:
     fields:
       - { label: Title, name: title, widget: string }
       - { label: Publish Date, name: date, widget: datetime }
-      - { label: 'Featured Image', name: featured_image, widget: image, required: false }
+      - { label: Featured Image, name: featured_image, widget: image, required: false }
       - { label: Body, name: body, widget: markdown }
       - { label: Tags, name: tags, widget: list }
