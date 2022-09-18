@@ -1,6 +1,6 @@
 <template>
   <NuxtLink :to="`/tags/${props.tag}`">
-    {{props.tag}}
+    <div class="badge">{{ props.tag }}</div>
   </NuxtLink>
 </template>
 

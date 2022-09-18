@@ -4,6 +4,7 @@
       <figure><img :src="post.featured_image" alt="" /></figure>
       <div class="card-body">
         <h2 class="card-title">{{ post.title }}</h2>
+        <p><TagGroup :tags="post.tags"></TagGroup></p>
         <p>{{ post.description }}</p>
         <div class="card-actions justify-end">
           <NuxtLink :to="post._path">
