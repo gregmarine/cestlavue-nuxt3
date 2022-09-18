@@ -21,7 +21,7 @@
         <NuxtLink to="/blog">
           <button class="btn btn-link">{{ blogSettings.title }}</button>
         </NuxtLink>
-        <BlogRoll :posts="blogPosts" />
+        <ContentRoll :posts="blogPosts" />
       </div>
     </ContentDoc>
   </div>

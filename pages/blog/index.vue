@@ -7,7 +7,7 @@
         
         <ContentRenderer :value="doc" class="space-y-8 mb-8" />
 
-        <BlogRoll :posts="posts" />
+        <ContentRoll :posts="posts" />
       </div>
     </ContentDoc>
   </div>

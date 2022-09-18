@@ -3,7 +3,7 @@
     <Header :title="`Content tagged with ${ route.params.slug[0] }`" />
 
     <div class="container mx-4 md:mx-auto overflow-y-auto pt-8">
-      <BlogRoll :posts="posts" />
+      <ContentRoll :posts="posts" />
     </div>
   </div>
 </template>
