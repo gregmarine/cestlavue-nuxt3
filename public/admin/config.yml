@@ -33,6 +33,8 @@ collections:
         file: content/settings/blog.md
         fields:
           - { label: Title, name: title, widget: string }
+          - { label: Show in Menu, name: menu, widget: boolean, default: true }
+          - { label: Show on Landing Page, name: landing, widget: boolean, default: true }
           - { label: Body, name: body, widget: markdown }
 
   - label: Blog

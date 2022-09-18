@@ -11,13 +11,17 @@
         <div class="max-w-md">
           <h1 class="mb-5 text-5xl font-bold"><p>{{ settings.title }}</p> <p>{{ settings.sub_title }}</p></h1>
           <p class="mb-5">{{ settings.hero_message }}</p>
-          <button class="btn btn-primary">{{ settings.cta_text }}</button>
+          <a href="#content">
+            <button class="btn btn-primary">{{ settings.cta_text }}</button>
+          </a>
         </div>
       </div>
     </div>
 
+    <div id="content"></div>
+
     <ContentDoc :path="blogSettings._path" v-slot="{ doc }">
-      <div class="container mx-4 md:mx-auto overflow-y-auto pt-8">
+      <div v-if="blogSettings.landing" class="container mx-4 md:mx-auto overflow-y-auto pt-8">
         <NuxtLink to="/blog">
           <button class="btn btn-link">{{ blogSettings.title }}</button>
         </NuxtLink>
@@ -30,6 +34,6 @@
 <script setup>
   const settings = await queryContent('/settings/general').findOne();
 
-  const blogSettings = await queryContent('/settings/blog').only(['_path', 'title', 'body']).findOne();
+  const blogSettings = await queryContent('/settings/blog').findOne();
   const blogPosts = await queryContent('/blog').sort({ date: 1 }).limit(3).find();
 </script>
