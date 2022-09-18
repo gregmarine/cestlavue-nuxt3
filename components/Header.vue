@@ -1,8 +1,5 @@
 <template>
   <header>
-    <Head>
-      <Title>{{ props.title }}</Title>
-    </Head>
     <div class="navbar bg-base-100 shadow-xl">
       <div class="navbar-start lg:hidden">
         <div class="dropdown">
@@ -12,7 +9,7 @@
           <ul tabindex="0" class="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52">
             <li v-for="collection of collections">
               <NuxtLink :to="`/${ collection.title.toLowerCase() }`">
-                <button class="btn btn-ghost">{{ collection.title }}</button>
+                {{ collection.title }}
               </NuxtLink>
             </li>
           </ul>
@@ -27,7 +24,7 @@
         <ul class="menu menu-horizontal p-0">
           <li v-for="collection of collections">
             <NuxtLink :to="`/${ collection.title.toLowerCase() }`">
-              <button class="btn btn-ghost">{{ collection.title }}</button>
+              {{ collection.title }}
             </NuxtLink>
           </li>
         </ul>

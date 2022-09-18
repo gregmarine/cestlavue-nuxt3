@@ -1,10 +1,5 @@
 <template>
   <div>
-    <Head>
-      <Title>{{ settings.title }}</Title>
-      <Script src="https://identity.netlify.com/v1/netlify-identity-widget.js" />
-    </Head>
-    
     <div class="hero min-h-screen" :style="`background-image: url(${ settings.hero_image });`">
       <div class="hero-overlay bg-opacity-60"></div>
       <div class="hero-content text-center text-neutral-content">
