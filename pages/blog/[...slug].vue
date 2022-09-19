@@ -3,7 +3,7 @@
     <ContentDoc v-slot="{ doc }">
       <Header :title="`${ settings.title }: ${ doc.title }`" />
 
-      <div class="container px-4 md:mx-auto h-full max-h-screen overflow-y-auto pt-8">
+      <div class="container px-4 md:mx-auto h-full max-h-screen overflow-y-auto pt-8 mb-16">
         <ContentRenderer :value="doc" class="space-y-8 mb-8" />
       </div>
     </ContentDoc>

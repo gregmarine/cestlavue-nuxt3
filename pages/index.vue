@@ -1,5 +1,5 @@
 <template>
-  <div class="flex flex-col h-screen w-screen">
+  <div class="container flex flex-col h-screen w-screen">
     <div class="w-screen overflow-y-auto scroll-smooth">
       <div class="hero min-h-screen" :style="`background-image: url(${ settings.hero_image });`">
         <div class="hero-overlay bg-opacity-60"></div>
