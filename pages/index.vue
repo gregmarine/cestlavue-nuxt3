@@ -16,8 +16,8 @@
 
       <div id="content"></div>
 
-      <ContentDoc :path="blogSettings._path" v-slot="{ doc }">
-        <div v-if="blogSettings.landing" class="container mx-auto overflow-y-auto pt-8">
+      <ContentDoc v-if="blogSettings.landing" :path="blogSettings._path" v-slot="{ doc }">
+        <div class="container mx-auto overflow-y-auto pt-8">
           <div class="divider">
             <NuxtLink to="/blog">
               <button class="btn btn-link">{{ blogSettings.title }}</button>
