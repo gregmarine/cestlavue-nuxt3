@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="w-screen">
     <div class="hero min-h-screen" :style="`background-image: url(${ settings.hero_image });`">
       <div class="hero-overlay bg-opacity-60"></div>
       <div class="hero-content text-center text-neutral-content">
@@ -31,4 +31,8 @@
 
   const blogSettings = await queryContent('/settings/blog').findOne();
   const blogPosts = await queryContent('/blog').sort({ date: 1 }).limit(3).find();
+
+  useHead({
+    title: "Landing Page"
+  })
 </script>

@@ -1,5 +1,5 @@
 <template>
-  <header>
+  <header class="relative">
     <div class="navbar bg-base-100 shadow-xl">
       <div class="navbar-start lg:hidden">
         <div class="dropdown">

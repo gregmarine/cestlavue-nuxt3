@@ -1,5 +1,5 @@
 <template>
-  <div class="flex flex-col h-screen">
+  <div class="flex flex-col h-screen w-screen">
     <ContentDoc :path="settings._path" v-slot="{ doc }">
       <Header :title="doc.title" />
 
