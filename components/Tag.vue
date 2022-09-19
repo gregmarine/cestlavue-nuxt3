@@ -1,7 +1,9 @@
 <template>
-  <NuxtLink :to="`/tags/${props.tag}`">
-    <div class="badge">{{ props.tag }}</div>
-  </NuxtLink>
+  <span>
+    <NuxtLink :to="`/tags/${props.tag}`">
+      <div class="badge">{{ props.tag }}</div>
+    </NuxtLink>
+  </span>
 </template>
 
 <script setup>

@@ -35,11 +35,67 @@ collections:
           - { label: Title, name: title, widget: string }
           - { label: Show in Menu, name: menu, widget: boolean, default: true }
           - { label: Show on Landing Page, name: landing, widget: boolean, default: true }
+          - { label: Display Order, name: order, widget: number, value_type: int, min: 1, max: 10 }
+          - { label: URL, name: url, widget: hidden, default: "/blog"}
+          - { label: Body, name: body, widget: markdown }
+
+      - label: Art Gallery
+        name: art
+        format: frontmatter
+        file: content/settings/art.md
+        fields:
+          - { label: Title, name: title, widget: string }
+          - { label: Show in Menu, name: menu, widget: boolean, default: true }
+          - { label: Show on Landing Page, name: landing, widget: boolean, default: true }
+          - { label: Display Order, name: order, widget: number, value_type: int, min: 1, max: 10 }
+          - { label: URL, name: url, widget: hidden, default: "/art"}
+          - { label: Body, name: body, widget: markdown }
+
+      - label: Photo Gallery
+        name: photo
+        format: frontmatter
+        file: content/settings/photo.md
+        fields:
+          - { label: Title, name: title, widget: string }
+          - { label: Show in Menu, name: menu, widget: boolean, default: true }
+          - { label: Show on Landing Page, name: landing, widget: boolean, default: true }
+          - { label: Display Order, name: order, widget: number, value_type: int, min: 1, max: 10 }
+          - { label: URL, name: url, widget: hidden, default: "/photo"}
           - { label: Body, name: body, widget: markdown }
 
   - label: Blog
     name: blog
     folder: content/blog
+    format: frontmatter
+    create: true
+    slug: '{{slug}}'
+    editor:
+      preview: false
+    fields:
+      - { label: Title, name: title, widget: string }
+      - { label: Publish Date, name: date, widget: datetime }
+      - { label: Featured Image, name: featured_image, widget: image, required: false }
+      - { label: Body, name: body, widget: markdown }
+      - { label: Tags, name: tags, widget: list }
+
+  - label: Art Gallery
+    name: art
+    folder: content/art
+    format: frontmatter
+    create: true
+    slug: '{{slug}}'
+    editor:
+      preview: false
+    fields:
+      - { label: Title, name: title, widget: string }
+      - { label: Publish Date, name: date, widget: datetime }
+      - { label: Featured Image, name: featured_image, widget: image, required: false }
+      - { label: Body, name: body, widget: markdown }
+      - { label: Tags, name: tags, widget: list }
+
+  - label: Photo Gallery
+    name: photo
+    folder: content/photo
     format: frontmatter
     create: true
     slug: '{{slug}}'

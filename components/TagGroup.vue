@@ -1,5 +1,7 @@
 <template>
-  <Tag v-for="tag of props.tags" :tag="tag" class="mr-2" />
+  <div>
+    <Tag v-for="tag, i of props.tags" :tag="tag" class="mr-2" :key="1"/>
+  </div>
 </template>
 
 <script setup>

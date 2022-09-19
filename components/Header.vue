@@ -12,8 +12,8 @@
                 Home
               </NuxtLink>
             </li>
-            <li v-for="collection of collections">
-              <NuxtLink :to="`/${ collection.title.toLowerCase() }`">
+            <li v-for="collection, i of collections" :key="i">
+              <NuxtLink :to="collection.url">
                 {{ collection.title }}
               </NuxtLink>
             </li>
@@ -32,8 +32,8 @@
               Home
             </NuxtLink>
           </li>
-          <li v-for="collection of collections">
-            <NuxtLink :to="`/${ collection.title.toLowerCase() }`">
+          <li v-for="collection, i of collections" :key="i">
+            <NuxtLink :to="collection.url">
               {{ collection.title }}
             </NuxtLink>
           </li>
@@ -46,5 +46,5 @@
 <script setup>
   const props = defineProps(['title']);
 
-  const collections = await queryContent('/settings').where({ menu: true }).find();
+  const collections = await queryContent('/settings').where({ menu: true }).sort({ order: 1 }).find();
 </script>
