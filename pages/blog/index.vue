@@ -3,9 +3,9 @@
     <ContentDoc :path="settings._path" v-slot="{ doc }">
       <Header :title="doc.title" />
 
-      <div class="container mx-4 md:mx-auto overflow-y-auto pt-8">
+      <div class="container mx-auto overflow-y-auto pt-8">
         
-        <ContentRenderer :value="doc" class="space-y-8 mb-8" />
+        <ContentRenderer :value="doc" class="px-4 md:mx-auto space-y-8 mb-8" />
 
         <ContentRoll :posts="posts" />
       </div>

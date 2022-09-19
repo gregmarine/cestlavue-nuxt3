@@ -1,5 +1,5 @@
 <template>
-  <div class="grid sm:grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8 mb-16">
+  <div class="grid justify-items-center sm:grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8 mb-16">
     <div v-for="post of props.posts" :key="post._path" class="card w-96 bg-base-100 shadow-xl">
       <figure><img :src="post.featured_image" alt="" /></figure>
       <div class="card-body">
