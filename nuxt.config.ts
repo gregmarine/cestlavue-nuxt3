@@ -8,5 +8,8 @@ export default defineNuxtConfig({
   ],
   content: {
     
-  }
+  },
+  css: [
+    "assets/css/styles.css"
+  ]
 })

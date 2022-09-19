@@ -1,6 +1,6 @@
 <template>
   <div class="flex flex-column h-screen w-screen overflow-hidden">
-    <NuxtPage />
+    <NuxtPage class="fade-in" />
   </div>
 </template>
 
@@ -44,3 +44,20 @@
     ]
   });
 </script>
+
+<style>
+  .fade-in {
+    animation: fadeInAnimation ease .5s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+  }
+
+  @keyframes fadeInAnimation {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+</style>
