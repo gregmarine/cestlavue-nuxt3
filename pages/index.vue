@@ -72,6 +72,10 @@
         content: settings.hero_message
       },
       {
+        property: "site_name",
+        content: settings.title
+      },
+      {
         property: "og:title",
         content: settings.title
       },
@@ -92,35 +96,63 @@
         content: settings.base_url + settings.social_image
       },
       {
+        property: "og:image:url",
+        content: settings.base_url + settings.social_image
+      },
+      {
+        property: "og:image:secure_url",
+        content: settings.base_url + settings.social_image
+      },
+      {
         property: "og:image:alt",
         content: settings.social_image_alt
       },
       {
-        property: "twitter:card",
-        content: "summary"
+        name: "twitter:card",
+        content: "summary_large_image"
       },
       {
-        property: "twitter:site",
-        content: "@" + settings.twitter
+        name: "twitter:site",
+        content: "https://twitter.com/" + settings.twitter
       },
       {
-        property: "twitter:title",
+        name: "twitter:site:id",
+        content: "https://twitter.com/" + settings.twitter
+      },
+      {
+        name: "twitter:creator",
+        content: "https://twitter.com/" + settings.twitter
+      },
+      {
+        name: "twitter:creator:id",
+        content: "https://twitter.com/" + settings.twitter
+      },
+      {
+        name: "twitter:title",
         content: settings.title
       },
       {
-        property: "twitter:description",
+        name: "twitter:text:title",
+        content: settings.title
+      },
+      {
+        name: "twitter:description",
         content: settings.hero_message
       },
       {
-        property: "twitter:url",
+        name: "twitter:url",
         content: settings.base_url
       },
       {
-        property: "twitter:image",
+        name: "twitter:image:src",
         content: settings.base_url + settings.social_image
       },
       {
-        property: "twitter:image:alt",
+        name: "twitter:image",
+        content: settings.base_url + settings.social_image
+      },
+      {
+        name: "twitter:image:alt",
         content: settings.social_image_alt
       },
     ]
