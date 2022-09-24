@@ -96,6 +96,10 @@
         content: "summary"
       },
       {
+        property: "twitter:site",
+        content: "@" + settings.twitter
+      },
+      {
         property: "twitter:title",
         content: settings.title
       },
@@ -110,6 +114,10 @@
       {
         property: "twitter:image",
         content: settings.base_url + settings.social_image
+      },
+      {
+        property: "twitter:image:alt",
+        content: settings.social_image_alt
       },
     ]
   })
