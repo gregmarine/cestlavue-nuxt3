@@ -92,6 +92,10 @@
         content: settings.base_url + settings.social_image
       },
       {
+        property: "og:image:alt",
+        content: settings.social_image_alt
+      },
+      {
         property: "twitter:card",
         content: "summary"
       },
