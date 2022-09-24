@@ -26,6 +26,8 @@ collections:
           - { label: Hero Message, name: hero_message, widget: string }
           - { label: Call to Action Text, name: cta_text, widget: string }
           - { label: Hero Image, name: hero_image, widget: image }
+          - { label: Base URL, name: base_url, widget: string }
+          - { label: Social Media Image, name: social_image, widget: image }
 
       - label: Blog
         name: blog

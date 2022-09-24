@@ -65,6 +65,52 @@
   const photoPosts = await queryContent('/photo').sort({ date: 1 }).limit(3).find();
 
   useHead({
-    title: "Landing Page"
+    title: "Landing Page",
+    meta: [
+      {
+        name: "description",
+        content: settings.hero_message
+      },
+      {
+        property: "og:title",
+        content: settings.title
+      },
+      {
+        property: "og:description",
+        content: settings.hero_message
+      },
+      {
+        property: "og:type",
+        content: "blog"
+      },
+      {
+        property: "og:url",
+        content: settings.base_url
+      },
+      {
+        property: "og:image",
+        content: settings.social_image
+      },
+      {
+        property: "twitter:card",
+        content: "summary"
+      },
+      {
+        property: "twitter:title",
+        content: settings.title
+      },
+      {
+        property: "twitter:description",
+        content: settings.hero_message
+      },
+      {
+        property: "twitter:url",
+        content: settings.base_url
+      },
+      {
+        property: "twitter:image",
+        content: settings.social_image
+      },
+    ]
   })
 </script>
