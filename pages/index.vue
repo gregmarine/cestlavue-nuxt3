@@ -85,7 +85,7 @@
       },
       {
         property: "og:type",
-        content: "blog"
+        content: "article"
       },
       {
         property: "og:url",
