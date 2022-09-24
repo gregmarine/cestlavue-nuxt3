@@ -89,7 +89,7 @@
       },
       {
         property: "og:image",
-        content: settings.social_image
+        content: settings.base_url + settings.social_image
       },
       {
         property: "twitter:card",
@@ -109,7 +109,7 @@
       },
       {
         property: "twitter:image",
-        content: settings.social_image
+        content: settings.base_url + settings.social_image
       },
     ]
   })
