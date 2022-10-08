@@ -1,6 +1,12 @@
 backend:
   name: git-gateway
   branch: main # Branch to update (optional; defaults to master)
+  commit_messages:
+    create: "Creating {{collection}} “{{slug}}”"
+    update: "Updating {{collection}} “{{slug}}”"
+    delete: "Deleting {{collection}} “{{slug}}”"
+    uploadMedia: "[skip ci] Uploading “{{path}}”"
+    deleteMedia: "[skip ci] Deleting “{{path}}”"
 
 # Publish mode https://www.netlifycms.org/docs/configuration-options/#publish-mode
 publish_mode: editorial_workflow
@@ -84,24 +90,9 @@ collections:
       - { label: Body, name: body, widget: markdown }
       - { label: Tags, name: tags, widget: list }
 
-  - label: Art Gallery
-    name: art
-    folder: content/art
-    format: frontmatter
-    create: true
-    slug: '{{slug}}'
-    editor:
-      preview: false
-    fields:
-      - { label: Title, name: title, widget: string }
-      - { label: Publish Date, name: date, widget: datetime }
-      - { label: Featured Image, name: featured_image, widget: image, required: false }
-      - { label: Body, name: body, widget: markdown }
-      - { label: Tags, name: tags, widget: list }
-
-  - label: Photo Gallery
-    name: photo
-    folder: content/photo
+  - label: Gallery
+    name: gallery
+    folder: content/gallery
     format: frontmatter
     create: true
     slug: '{{slug}}'
