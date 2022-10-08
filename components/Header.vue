@@ -21,11 +21,7 @@
         </div>
       </div>
 
-      <div class="navbar-end lg:navbar-start">
-        {{ props.title }}
-      </div>
-
-      <div class="navbar-end hidden lg:flex">
+      <div class="navbar-start hidden lg:flex">
         <ul class="menu menu-horizontal p-0">
           <li>
             <NuxtLink to="/">
@@ -38,6 +34,10 @@
             </NuxtLink>
           </li>
         </ul>
+      </div>
+
+      <div class="navbar-end">
+        {{ props.title }}
       </div>
     </div>
   </header>
