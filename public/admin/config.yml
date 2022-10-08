@@ -110,6 +110,9 @@ collections:
     label_singular: 'Page'
     folder: content/pages
     create: true
+    path: '{{slug}}'
+    editor:
+      preview: false
     # adding a nested object will show the collection folder structure
     nested:
       depth: 100 # max depth to show in the collection tree
@@ -123,4 +126,4 @@ collections:
         widget: markdown
     # adding a meta object with a path property allows editing the path of entries
     # moving an existing entry will move the entire sub tree of the entry to the new location
-    meta: { path: { widget: string, label: 'Path', index_file: 'index' } }
+    # meta: { path: { widget: string, label: 'Path', index_file: 'index' } }
