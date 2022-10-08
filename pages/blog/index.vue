@@ -14,7 +14,7 @@
 </template>
 
 <script setup lang="ts">
-const posts = await queryContent('/blog').sort({ date: 1 }).find();
+const posts = await queryContent('/blog').sort({ date: -1 }).find();
 
 const settings = await queryContent('/settings/blog').only(['_path', 'title', 'body']).findOne();
 </script>

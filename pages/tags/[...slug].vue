@@ -12,5 +12,5 @@
   const route = useRoute();
   const posts = await queryContent().where({
     tags: { $contains: route.params.slug },
-  }).sort({ date: 1 }).find();
+  }).sort({ date: -1 }).find();
 </script>

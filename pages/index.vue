@@ -27,25 +27,14 @@
         </div>
       </ContentDoc>
 
-      <ContentDoc v-if="artSettings.landing" :path="artSettings._path" v-slot="{ doc }">
+      <ContentDoc v-if="gallerySettings.landing" :path="gallerySettings._path" v-slot="{ doc }">
         <div class="container mx-auto overflow-y-auto pt-8">
           <div class="divider">
-            <NuxtLink to="/art">
-              <button class="btn btn-link">{{ artSettings.title }}</button>
+            <NuxtLink to="/gallery">
+              <button class="btn btn-link">{{ gallerySettings.title }}</button>
             </NuxtLink>
           </div>
-          <ContentRoll :posts="artPosts" />
-        </div>
-      </ContentDoc>
-
-      <ContentDoc v-if="photoSettings.landing" :path="photoSettings._path" v-slot="{ doc }">
-        <div class="container mx-auto overflow-y-auto pt-8">
-          <div class="divider">
-            <NuxtLink to="/photo">
-              <button class="btn btn-link">{{ photoSettings.title }}</button>
-            </NuxtLink>
-          </div>
-          <ContentRoll :posts="photoPosts" />
+          <ContentRoll :posts="galleryPosts" />
         </div>
       </ContentDoc>
     </div>
@@ -56,13 +45,10 @@
   const settings = await queryContent('/settings/general').findOne();
 
   const blogSettings = await queryContent('/settings/blog').findOne();
-  const blogPosts = await queryContent('/blog').sort({ date: 1 }).limit(3).find();
+  const blogPosts = await queryContent('/blog').sort({ date: -1 }).limit(3).find();
 
-  const artSettings = await queryContent('/settings/art').findOne();
-  const artPosts = await queryContent('/art').sort({ date: 1 }).limit(3).find();
-
-  const photoSettings = await queryContent('/settings/photo').findOne();
-  const photoPosts = await queryContent('/photo').sort({ date: 1 }).limit(3).find();
+  const gallerySettings = await queryContent('/settings/gallery').findOne();
+  const galleryPosts = await queryContent('/gallery').sort({ date: -1 }).limit(3).find();
 
   useHead({
     title: "Landing Page",

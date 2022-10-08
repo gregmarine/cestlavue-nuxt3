@@ -21,7 +21,7 @@
         </div>
       </div>
 
-      <div class="navbar-center lg:navbar-start">
+      <div class="navbar-end lg:navbar-start">
         {{ props.title }}
       </div>
 

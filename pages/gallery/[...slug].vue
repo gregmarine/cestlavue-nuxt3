@@ -28,6 +28,11 @@
       <Header :title="`${ settings.title }: ${ doc.title }`" />
 
       <div class="container px-4 md:mx-auto h-full max-h-screen overflow-y-auto pt-8 mb-16">
+        <div class="flex justify-center">
+          <div class="card w-1/2 shadow-xl mb-8">
+            <figure><img :src="doc.featured_image" :alt="doc.title" /></figure>
+          </div>
+        </div>
         <ContentRenderer :value="doc" class="space-y-8 mb-8" />
       </div>
     </ContentDoc>
@@ -35,6 +40,6 @@
 </template>
 
 <script setup lang="ts">
-const settings = await queryContent('/settings/art').only(['_path', 'title', 'body']).findOne();
+const settings = await queryContent('/settings/gallery').only(['_path', 'title', 'body']).findOne();
 const generalSettings = await queryContent('/settings/general').findOne();
 </script>
