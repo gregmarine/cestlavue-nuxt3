@@ -18,23 +18,23 @@
 
       <ContentDoc v-if="blogSettings.landing" :path="blogSettings._path" v-slot="{ doc }">
         <div class="container mx-auto overflow-y-auto pt-8">
-          <div class="divider">
+          <div class="divider pb-8">
             <NuxtLink to="/blog">
               <button class="btn btn-link">{{ blogSettings.title }}</button>
             </NuxtLink>
           </div>
-          <ContentRoll :posts="blogPosts" />
+          <ContentRoll path="blog" :sort="{ date: -1 }" limit="3" cta_text="Read More" />
         </div>
       </ContentDoc>
 
       <ContentDoc v-if="gallerySettings.landing" :path="gallerySettings._path" v-slot="{ doc }">
         <div class="container mx-auto overflow-y-auto pt-8">
-          <div class="divider">
+          <div class="divider pb-8">
             <NuxtLink to="/gallery">
               <button class="btn btn-link">{{ gallerySettings.title }}</button>
             </NuxtLink>
           </div>
-          <ContentRoll :posts="galleryPosts" />
+          <ContentRoll path="gallery" :where="{ top_level: false }" :sort="{ date: -1 }" limit="3" cta_text="Read More" />
         </div>
       </ContentDoc>
     </div>
@@ -45,10 +45,8 @@
   const settings = await queryContent('/settings/general').findOne();
 
   const blogSettings = await queryContent('/settings/blog').findOne();
-  const blogPosts = await queryContent('/blog').sort({ date: -1 }).limit(3).find();
 
   const gallerySettings = await queryContent('/settings/gallery').findOne();
-  const galleryPosts = await queryContent('/gallery').sort({ date: -1 }).limit(3).find();
 
   useHead({
     title: "Landing Page",

@@ -7,14 +7,12 @@
         
         <ContentRenderer :value="doc" class="px-4 md:mx-auto space-y-8 mb-8" />
 
-        <ContentRoll :posts="posts" />
+        <ContentRoll path="gallery" :where="{ top_level: true }" :sort="{ date: -1 }" cta_text="Open" />
       </div>
     </ContentDoc>
   </div>
 </template>
 
 <script setup lang="ts">
-const posts = await queryContent('/gallery').sort({ date: -1 }).find();
-
 const settings = await queryContent('/settings/gallery').only(['_path', 'title', 'body']).findOne();
 </script>

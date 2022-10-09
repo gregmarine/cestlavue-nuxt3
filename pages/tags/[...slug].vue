@@ -3,14 +3,11 @@
     <Header :title="`Content tagged with ${ route.params.slug[0] }`" />
 
     <div class="container mx-auto overflow-y-auto pt-8">
-      <ContentRoll :posts="posts" />
+      <ContentRoll :where="{ tags: { $contains: route.params.slug } }" :sort="{ date: -1 }" cta_text="Read More" />
     </div>
   </div>
 </template>
 
 <script setup lang="ts">
-  const route = useRoute();
-  const posts = await queryContent().where({
-    tags: { $contains: route.params.slug },
-  }).sort({ date: -1 }).find();
+const route = useRoute();
 </script>

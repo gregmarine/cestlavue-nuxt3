@@ -7,14 +7,12 @@
         
         <ContentRenderer :value="doc" class="px-4 md:mx-auto space-y-8 mb-8" />
 
-        <ContentRoll :posts="posts" />
+        <ContentRoll path="blog" :sort="{ date: -1 }" cta_text="Read More" />
       </div>
     </ContentDoc>
   </div>
 </template>
 
 <script setup lang="ts">
-const posts = await queryContent('/blog').sort({ date: -1 }).find();
-
 const settings = await queryContent('/settings/blog').only(['_path', 'title', 'body']).findOne();
 </script>
