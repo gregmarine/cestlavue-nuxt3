@@ -37,108 +37,118 @@
           <ContentRoll path="gallery" :where="{ top_level: false }" :sort="{ date: -1 }" limit="3" cta_text="Read More" />
         </div>
       </ContentDoc>
+
+      <ContentDoc v-if="pagesSettings.landing" :path="pagesSettings._path" v-slot="{ doc }">
+        <div class="container mx-auto overflow-y-auto pt-8">
+          <div class="divider pb-8">
+            <NuxtLink to="/pages">
+              <button class="btn btn-link">{{ pagesSettings.title }}</button>
+            </NuxtLink>
+          </div>
+          <ContentRoll path="pages" :where="{ top_level: true }" :sort="{ date: -1 }" limit="3" cta_text="Read" />
+        </div>
+      </ContentDoc>
     </div>
   </div>
 </template>
 
 <script setup>
-  const settings = await queryContent('/settings/general').findOne();
+const settings = await queryContent('/settings/general').findOne();
+const blogSettings = await queryContent('/settings/blog').findOne();
+const gallerySettings = await queryContent('/settings/gallery').findOne();
+const pagesSettings = await queryContent('/settings/pages').findOne();
 
-  const blogSettings = await queryContent('/settings/blog').findOne();
-
-  const gallerySettings = await queryContent('/settings/gallery').findOne();
-
-  useHead({
-    title: "Landing Page",
-    meta: [
-      {
-        name: "description",
-        content: settings.hero_message
-      },
-      {
-        property: "site_name",
-        content: settings.title
-      },
-      {
-        property: "og:title",
-        content: settings.title
-      },
-      {
-        property: "og:description",
-        content: settings.hero_message
-      },
-      {
-        property: "og:type",
-        content: "article"
-      },
-      {
-        property: "og:url",
-        content: settings.base_url
-      },
-      {
-        property: "og:image",
-        content: settings.base_url + settings.social_image
-      },
-      {
-        property: "og:image:url",
-        content: settings.base_url + settings.social_image
-      },
-      {
-        property: "og:image:secure_url",
-        content: settings.base_url + settings.social_image
-      },
-      {
-        property: "og:image:alt",
-        content: settings.social_image_alt
-      },
-      {
-        name: "twitter:card",
-        content: "summary_large_image"
-      },
-      {
-        name: "twitter:site",
-        content: "https://twitter.com/" + settings.twitter
-      },
-      {
-        name: "twitter:site:id",
-        content: "https://twitter.com/" + settings.twitter
-      },
-      {
-        name: "twitter:creator",
-        content: "https://twitter.com/" + settings.twitter
-      },
-      {
-        name: "twitter:creator:id",
-        content: "https://twitter.com/" + settings.twitter
-      },
-      {
-        name: "twitter:title",
-        content: settings.title
-      },
-      {
-        name: "twitter:text:title",
-        content: settings.title
-      },
-      {
-        name: "twitter:description",
-        content: settings.hero_message
-      },
-      {
-        name: "twitter:url",
-        content: settings.base_url
-      },
-      {
-        name: "twitter:image:src",
-        content: settings.base_url + settings.social_image
-      },
-      {
-        name: "twitter:image",
-        content: settings.base_url + settings.social_image
-      },
-      {
-        name: "twitter:image:alt",
-        content: settings.social_image_alt
-      },
-    ]
-  })
+useHead({
+  title: "Landing Page",
+  meta: [
+    {
+      name: "description",
+      content: settings.hero_message
+    },
+    {
+      property: "site_name",
+      content: settings.title
+    },
+    {
+      property: "og:title",
+      content: settings.title
+    },
+    {
+      property: "og:description",
+      content: settings.hero_message
+    },
+    {
+      property: "og:type",
+      content: "article"
+    },
+    {
+      property: "og:url",
+      content: settings.base_url
+    },
+    {
+      property: "og:image",
+      content: settings.base_url + settings.social_image
+    },
+    {
+      property: "og:image:url",
+      content: settings.base_url + settings.social_image
+    },
+    {
+      property: "og:image:secure_url",
+      content: settings.base_url + settings.social_image
+    },
+    {
+      property: "og:image:alt",
+      content: settings.social_image_alt
+    },
+    {
+      name: "twitter:card",
+      content: "summary_large_image"
+    },
+    {
+      name: "twitter:site",
+      content: "https://twitter.com/" + settings.twitter
+    },
+    {
+      name: "twitter:site:id",
+      content: "https://twitter.com/" + settings.twitter
+    },
+    {
+      name: "twitter:creator",
+      content: "https://twitter.com/" + settings.twitter
+    },
+    {
+      name: "twitter:creator:id",
+      content: "https://twitter.com/" + settings.twitter
+    },
+    {
+      name: "twitter:title",
+      content: settings.title
+    },
+    {
+      name: "twitter:text:title",
+      content: settings.title
+    },
+    {
+      name: "twitter:description",
+      content: settings.hero_message
+    },
+    {
+      name: "twitter:url",
+      content: settings.base_url
+    },
+    {
+      name: "twitter:image:src",
+      content: settings.base_url + settings.social_image
+    },
+    {
+      name: "twitter:image",
+      content: settings.base_url + settings.social_image
+    },
+    {
+      name: "twitter:image:alt",
+      content: settings.social_image_alt
+    },
+  ]
+});
 </script>

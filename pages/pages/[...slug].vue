@@ -42,6 +42,6 @@
 </template>
 
 <script setup lang="ts">
-const settings = await queryContent('/settings/gallery').only(['_path', 'title', 'body']).findOne();
+const settings = await queryContent('/settings/pages').only(['_path', 'title', 'body']).findOne();
 const generalSettings = await queryContent('/settings/general').findOne();
 </script>
