@@ -1,7 +1,7 @@
 <template>
   <div class="grid justify-items-center sm:grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8 mb-16">
     <div v-for="post of posts" :key="post._path" class="card w-96 bg-base-100 shadow-xl">
-      <figure><img :src="post.featured_image" alt="" /></figure>
+      <figure><img v-if="post.featured_image" :src="post.featured_image" :alt="post.title" /></figure>
       <div class="card-body">
         <h2 class="card-title">{{ post.title }}</h2>
         <p><TagGroup :tags="post.tags"></TagGroup></p>
