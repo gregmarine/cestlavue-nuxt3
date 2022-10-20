@@ -27,7 +27,7 @@
       </Head>
       <Header :title="`${ settings.title }: ${ doc.title }`" />
 
-      <div class="container px-4 md:mx-auto h-full max-h-screen overflow-y-auto pt-8 mb-16">
+      <div class="px-4 md:mx-auto lg:mx-48 xl:mx-96 h-full max-h-screen overflow-y-auto pt-8 mb-16 indent-10">
         <div v-if="!doc.top_level" class="flex justify-center">
           <div class="card w-full lg:w-1/2 shadow-xl mb-8">
             <figure><img v-if="doc.featured_image" :src="doc.featured_image" :alt="doc.title" /></figure>

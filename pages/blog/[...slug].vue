@@ -27,7 +27,7 @@
       </Head>
       <Header :title="`${ settings.title }: ${ doc.title }`" />
 
-      <div class="container px-4 md:mx-auto h-full max-h-screen overflow-y-auto pt-8 mb-16">
+      <div class="px-4 md:mx-auto lg:mx-48 xl:mx-96 h-full max-h-screen overflow-y-auto pt-8 mb-16 indent-10">
         <ContentRenderer :value="doc" class="space-y-8 mb-8" />
       </div>
     </ContentDoc>

@@ -20,3 +20,9 @@ body {
   -ms-text-size-adjust: none;
   text-size-adjust: none;
 }
+
+blockquote {
+  margin: 1.2em;
+  padding: 1.2em;
+  border-left: .2em solid gray;
+}
