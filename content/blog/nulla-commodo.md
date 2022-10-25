@@ -1,6 +1,7 @@
 ---
 title: Nulla commodo
 date: 2022-09-11T18:42:57.108Z
+published: true
 featured_image: /images/dsc03407.jpeg
 ---
 Proin ullamcorper enim urna, non vestibulum massa imperdiet vitae. Fusce ultrices finibus erat, ut vestibulum urna. In molestie lacus nulla, vel ullamcorper tortor fringilla quis. Vivamus mollis pellentesque purus, lobortis bibendum ex ultricies ut. Praesent pretium ultrices dolor vel commodo. Suspendisse sollicitudin, nulla vitae gravida sollicitudin, mi risus ultricies tellus, at porttitor nisl ex et lorem. Mauris at semper ligula.
