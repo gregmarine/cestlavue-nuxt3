@@ -23,7 +23,7 @@
               <button class="btn btn-link">{{ blogSettings.title }}</button>
             </NuxtLink>
           </div>
-          <ContentRoll path="blog" :sort="{ date: -1 }" limit="3" cta_text="Read More" />
+          <ContentRoll path="blog" :where="{ published: true }" :sort="{ date: -1 }" limit="3" cta_text="Read More" />
         </div>
       </ContentDoc>
 
@@ -34,7 +34,7 @@
               <button class="btn btn-link">{{ gallerySettings.title }}</button>
             </NuxtLink>
           </div>
-          <ContentRoll path="gallery" :where="{ top_level: false }" :sort="{ date: -1 }" limit="3" cta_text="Read More" />
+          <ContentRoll path="gallery" :where="{ top_level: false, published: true }" :sort="{ date: -1 }" limit="3" cta_text="Read More" />
         </div>
       </ContentDoc>
 
@@ -45,7 +45,7 @@
               <button class="btn btn-link">{{ pagesSettings.title }}</button>
             </NuxtLink>
           </div>
-          <ContentRoll path="pages" :where="{ top_level: true }" :sort="{ date: -1 }" limit="3" cta_text="Read" />
+          <ContentRoll path="pages" :where="{ top_level: true, published: true }" :sort="{ date: -1 }" limit="3" cta_text="Read" />
         </div>
       </ContentDoc>
     </div>

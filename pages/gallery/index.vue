@@ -7,7 +7,7 @@
         
         <ContentRenderer :value="doc" class="px-4 md:mx-auto space-y-8 mb-8" />
 
-        <ContentRoll path="gallery" :where="{ top_level: true }" :sort="{ date: -1 }" cta_text="Open" />
+        <ContentRoll path="gallery" :where="{ top_level: true, published: true }" :sort="{ date: -1 }" cta_text="Open" />
       </div>
     </ContentDoc>
   </div>

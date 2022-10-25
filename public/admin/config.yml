@@ -87,6 +87,7 @@ collections:
     fields:
       - { label: Title, name: title, widget: string }
       - { label: Publish Date, name: date, widget: datetime }
+      - { label: Published, name: published, widget: boolean, default: false }
       - { label: Featured Image, name: featured_image, widget: image, required: false }
       - { label: Body, name: body, widget: markdown }
       - { label: Tags, name: tags, widget: list }
@@ -105,6 +106,7 @@ collections:
       - { label: Title, name: title, widget: string }
       - { label: Is Top Level, name: top_level, widget: boolean, default: true, hint: 'If this should contain entries, mark it as top level (Example: Art would be top level. Whereas a painting is not.)' }
       - { label: Publish Date, name: date, widget: datetime, required: false }
+      - { label: Published, name: published, widget: boolean, default: false }
       - { label: Featured Image, name: featured_image, widget: image, required: false }
       - { label: Body, name: body, widget: markdown }
       - { label: Tags, name: tags, widget: list }
@@ -124,6 +126,7 @@ collections:
       - { label: Title, name: title, widget: string }
       - { label: Is Top Level, name: top_level, widget: boolean, default: true, hint: 'If this should contain sub pages, mark it as top level (Example: A "Book" or an index of pages would be top level. Whereas a simple page is not.)' }
       - { label: Publish Date, name: date, widget: datetime, required: false }
+      - { label: Published, name: published, widget: boolean, default: false }
       - { label: Featured Image, name: featured_image, widget: image, required: false }
       - { label: Body, name: body, widget: markdown }
       - { label: Tags, name: tags, widget: list }

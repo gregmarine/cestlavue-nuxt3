@@ -7,7 +7,7 @@
         
         <ContentRenderer :value="doc" class="px-4 md:mx-auto space-y-8 mb-8" />
 
-        <ContentRoll path="blog" :sort="{ date: -1 }" cta_text="Read More" />
+        <ContentRoll path="blog" :where="{ published: true }" :sort="{ date: -1 }" cta_text="Read More" />
       </div>
     </ContentDoc>
   </div>

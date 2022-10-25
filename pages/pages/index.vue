@@ -7,7 +7,7 @@
         
         <ContentRenderer :value="doc" class="px-4 md:mx-auto space-y-8 mb-8" />
 
-        <ContentRoll path="pages" :where="{ top_level: true }" :sort="{ title: 1 }" cta_text="Read" />
+        <ContentRoll path="pages" :where="{ top_level: true, published: true }" :sort="{ title: 1 }" cta_text="Read" />
       </div>
     </ContentDoc>
   </div>
