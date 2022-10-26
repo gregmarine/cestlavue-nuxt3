@@ -35,7 +35,7 @@
         </div>
         <ContentRenderer :value="doc" class="space-y-8 mb-8" />
 
-        <ContentRoll v-if="doc.top_level" :path="doc._path" :where="{ top_level: false }" :sort="{ _path: 1 }" cta_text="Read More" />
+        <ContentRoll v-if="doc.top_level" :path="doc._path" :where="{ top_level: false, published: true }" :sort="{ _path: 1 }" cta_text="Read More" />
       </div>
     </ContentDoc>
   </div>
