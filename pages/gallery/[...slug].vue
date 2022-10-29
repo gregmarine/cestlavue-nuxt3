@@ -30,12 +30,26 @@
       <div class="px-4 md:mx-auto lg:mx-48 xl:mx-96 h-full max-h-screen overflow-y-auto pt-8 mb-16">
         <div v-if="!doc.top_level" class="flex justify-center">
           <div class="card w-full lg:w-1/2 shadow-xl mb-8">
-            <figure><img v-if="doc.featured_image" :src="doc.featured_image" :alt="doc.title" /></figure>
+            <figure>
+              <!-- The clicking the image will open it into a larger modal -->
+              <label for="image-modal">
+                <img v-if="doc.featured_image" :src="doc.featured_image" :alt="doc.title" />
+              </label>
+            </figure>
           </div>
         </div>
         <ContentRenderer :value="doc" class="space-y-8 mb-8" />
 
         <ContentRoll v-if="doc.top_level" :path="doc._path" :where="{ top_level: false, published: true }" :sort="{ date: -1 }" cta_text="Read More" />
+      </div>
+
+      <!-- Put this part before </body> tag -->
+      <input type="checkbox" id="image-modal" class="modal-toggle" />
+      <div class="modal">
+        <div class="modal-box w-11/12 max-w-5xl">
+          <label for="image-modal" class="btn btn-sm btn-circle absolute right-2 top-2">✕</label>
+          <img v-if="doc.featured_image" :src="doc.featured_image" :alt="doc.title" />
+        </div>
       </div>
     </ContentDoc>
   </div>
