@@ -71,6 +71,7 @@ collections:
           - { label: Title, name: title, widget: string }
           - { label: Show in Menu, name: menu, widget: boolean, default: true }
           - { label: Show on Landing Page, name: landing, widget: boolean, default: true }
+          - { label: Table of Contents Style, name: toc_style, widget: select, options: [ "Cards", "List" ], default: "Cards" }
           - { label: Display Order, name: order, widget: number, value_type: int, min: 1, max: 10 }
           - { label: URL, name: url, widget: hidden, default: "/pages"}
           - { label: Body, name: body, widget: markdown }
@@ -125,7 +126,6 @@ collections:
     fields:
       - { label: Title, name: title, widget: string }
       - { label: Is Top Level, name: top_level, widget: boolean, default: true, hint: 'If this should contain sub pages, mark it as top level (Example: A "Book" or an index of pages would be top level. Whereas a simple page is not.)' }
-      - { label: Table of Contents Style, name: toc_style, widget: select, options: [ "Cards", "List" ], required: false }
       - { label: Publish Date, name: date, widget: datetime, required: false }
       - { label: Published, name: published, widget: boolean, required: false, default: false }
       - { label: Featured Image, name: featured_image, widget: image, required: false }
