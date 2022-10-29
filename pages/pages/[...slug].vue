@@ -35,13 +35,16 @@
         </div>
         <ContentRenderer :value="doc" class="space-y-8 mb-8" />
 
-        <ContentRoll v-if="doc.top_level" :path="doc._path" :where="{ top_level: false, published: true }" :sort="{ _path: 1 }" cta_text="Read More" />
+        <div  v-if="doc.top_level">
+          <ContentRoll v-if="settings.toc_style === 'Cards'" :path="doc._path" :where="{ top_level: false, published: true }" :sort="{ _path: 1 }" cta_text="Read More" />
+          <ContentList v-if="settings.toc_style === 'List'" :path="doc._path" :where="{ top_level: false, published: true }" :sort="{ _path: 1 }" />
+        </div>
       </div>
     </ContentDoc>
   </div>
 </template>
 
 <script setup lang="ts">
-const settings = await queryContent('/settings/pages').only(['_path', 'title', 'body']).findOne();
+const settings = await queryContent('/settings/pages').findOne();
 const generalSettings = await queryContent('/settings/general').findOne();
 </script>
