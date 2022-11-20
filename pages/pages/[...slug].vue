@@ -28,7 +28,12 @@
       <Header :title="`${ settings.title }: ${ doc.title }`" />
 
       <div :class="`px-4 mx-auto h-full max-h-screen overflow-y-auto mb-16 ${ !doc.top_level ? 'prose dark:prose-invert' : '' }`">
-        <img v-if="!doc.top_level && doc.featured_image" :src="doc.featured_image" :alt="doc.title" />
+        <div v-if="doc.top_level && doc.featured_image" class="flex justify-center">
+          <div class="card w-full lg:w-1/2 shadow-xl mb-8">
+            <figure><img :src="doc.featured_image" :alt="doc.title" /></figure>
+          </div>
+        </div>
+        <img v-else-if="!doc.top_level && doc.featured_image" :src="doc.featured_image" :alt="doc.title" />
         <ContentRenderer :value="doc" class="space-y-8 mb-8" />
 
         <div  v-if="doc.top_level">
