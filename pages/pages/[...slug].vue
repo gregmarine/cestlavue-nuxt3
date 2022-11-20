@@ -33,19 +33,25 @@
             <figure><img :src="doc.featured_image" :alt="doc.title" /></figure>
           </div>
         </div>
+        
         <img v-else-if="!doc.top_level && doc.featured_image" :src="doc.featured_image" :alt="doc.title" />
+        
         <ContentRenderer :value="doc" class="space-y-8 mb-8" />
 
-        <div  v-if="doc.top_level">
+        <div v-if="doc.top_level">
           <ContentRoll v-if="settings.toc_style === 'Cards'" :path="doc._path" :where="{ top_level: false, published: true }" :sort="{ _path: 1 }" cta_text="Read More" />
           <ContentList v-if="settings.toc_style === 'List'" :path="doc._path" :where="{ top_level: false, published: true }" :sort="{ _path: 1 }" />
         </div>
+
+        <PagesNav v-else :path="doc._path" :where="{ top_level: false, published: true }" :sort="{ _path: 1 }" />
       </div>
     </ContentDoc>
   </div>
 </template>
 
 <script setup lang="ts">
+import PagesNav from '~~/components/PagesNav.vue';
+
 const settings = await queryContent('/settings/pages').findOne();
 const generalSettings = await queryContent('/settings/general').findOne();
 </script>
