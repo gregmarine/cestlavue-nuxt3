@@ -1,23 +1,23 @@
 <template>
-  <ul class="menu menu-horizontal bg-base-100">
-    <li v-if="prev">
-      <NuxtLink :to="prev._path">
-        <img src="/assets/icons/arrow-back-outline.svg" class="w-8" />
+  <div class="grid grid-cols-3 gap-4">
+    <div>
+      <NuxtLink v-if="prev" :to="prev._path" class="inline-flex">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mt-1" fill="none" viewBox="0 0 512 512"><title>ionicons-v5-a</title><polyline points="244 400 100 256 244 112" style="fill:none;stroke:currentColor;stroke-linecap:round;stroke-linejoin:round;stroke-width:48px"/><line x1="120" y1="256" x2="412" y2="256" style="fill:none;stroke:currentColor;stroke-linecap:round;stroke-linejoin:round;stroke-width:48px"/></svg>
         {{ prev.title }}
       </NuxtLink>
-    </li>
-    <li>
+    </div>
+    <div class="flex justify-center">
       <NuxtLink :to="toc">
-        <img src="/assets/icons/menu-outline.svg" class="w-8" />
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 512 512"><title>ionicons-v5-j</title><line x1="80" y1="160" x2="432" y2="160" style="fill:none;stroke:currentColor;stroke-linecap:round;stroke-miterlimit:10;stroke-width:32px"/><line x1="80" y1="256" x2="432" y2="256" style="fill:none;stroke:currentColor;stroke-linecap:round;stroke-miterlimit:10;stroke-width:32px"/><line x1="80" y1="352" x2="432" y2="352" style="fill:none;stroke:currentColor;stroke-linecap:round;stroke-miterlimit:10;stroke-width:32px"/></svg>
       </NuxtLink>
-    </li>
-    <li v-if="next">
-      <NuxtLink :to="next._path">
+    </div>
+    <div class="flex justify-end">
+      <NuxtLink v-if="next" :to="next._path" class="inline-flex">
         {{ next.title }}
-        <img src="/assets/icons/arrow-forward-outline.svg" class="w-8" />
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mt-1" viewBox="0 0 512 512"><title>ionicons-v5-a</title><polyline points="268 112 412 256 268 400" style="fill:none;stroke:currentColor;stroke-linecap:round;stroke-linejoin:round;stroke-width:48px"/><line x1="392" y1="256" x2="100" y2="256" style="fill:none;stroke:currentColor;stroke-linecap:round;stroke-linejoin:round;stroke-width:48px"/></svg>
       </NuxtLink>
-    </li>
-  </ul>
+    </div>
+  </div>
 </template>
 
 <script setup lang="ts">
