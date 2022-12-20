@@ -1,5 +1,5 @@
 <template>
-  <ul class="menu bg-base-100">
+  <ul class="menu bg-base-100 mb-16">
     <li v-for="post of posts" :key="post._path">
       <NuxtLink :to="post._path">
         {{ post.title }}
