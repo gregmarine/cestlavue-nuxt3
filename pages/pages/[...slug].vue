@@ -25,7 +25,7 @@
         <Meta name="twitter:image" :content="`${generalSettings.base_url}${doc.featured_image}`" />
         <Meta name="twitter:image:alt" :content="doc.title" />
       </Head>
-      <Header :title="`${ settings.title }: ${ doc.title }`" />
+      <Header :title="doc.title" />
 
       <div :class="`px-4 mx-auto h-full max-h-screen overflow-y-auto mb-16 ${ !doc.top_level ? 'prose dark:prose-invert' : '' }`">
         <div v-if="doc.top_level && doc.featured_image" class="flex justify-center">
@@ -50,7 +50,7 @@
 </template>
 
 <script setup lang="ts">
-import PagesNav from '~~/components/PagesNav.vue';
+import PagesNav from '~/components/PagesNav.vue';
 
 const settings = await queryContent('/settings/pages').findOne();
 const generalSettings = await queryContent('/settings/general').findOne();
