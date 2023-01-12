@@ -151,6 +151,7 @@ collections:
           label: Ingredients,
           name: ingredients,
           widget: list,
+          summary: '{{qty}} {{unit}} {{ingredient}} ({{note}})',
           fields:
             [
               { label: Quantity, name: qty, widget: string },
@@ -193,6 +194,7 @@ collections:
           label: Instructions,
           name: instructions,
           widget: list,
+          summary: '{{instruction}} ({{note}})',
           fields:
             [
               { label: Instruction, name: instruction, widget: string },
