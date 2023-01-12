@@ -146,7 +146,7 @@ collections:
       - { label: Publish Date, name: date, widget: datetime, required: false }
       - { label: Published, name: published, widget: boolean, required: false, default: false }
       - { label: Featured Image, name: featured_image, widget: image, required: false }
-      - { label: Overview, name: overview, widget: markdown }
+      - { label: Overview, name: overview, widget: markdown, required: false }
       - {
           label: Ingredients,
           name: ingredients,
@@ -186,7 +186,7 @@ collections:
                   ]
               },
               { label: Ingredient, name: ingredient, widget: string },
-              { label: Note, name: note, widget: string },
+              { label: Note, name: note, widget: string, required: false },
             ]
         }
       - {
@@ -196,8 +196,8 @@ collections:
           fields:
             [
               { label: Instruction, name: instruction, widget: string },
-              { label: Note, name: note, widget: string },
+              { label: Note, name: note, widget: string, required: false },
             ]
         }
-      - { label: Notes, name: notes, widget: markdown }
+      - { label: Notes, name: notes, widget: markdown, required: false }
       - { label: Tags, name: tags, widget: list }
