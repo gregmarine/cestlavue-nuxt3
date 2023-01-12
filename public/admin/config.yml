@@ -160,16 +160,42 @@ collections:
                 widget: select,
                 options:
                   [
-                    "tsp",
-                    "tbsp",
-                    "oz",
-                    "C",
-                    "pt",
-                    "qt",
-                    "gal",
+                    "tsp(s)",
+                    "tbsp(s)",
+                    "oz(s)",
+                    "cup(s)",
+                    "pint(s)",
+                    "quart(s)",
+                    "gallon(S)",
+                    "slice(s)",
+                    "pound(s)",
+                    "gram(s)",
+                    "kilogram(s)",
+                    "small",
+                    "medium",
+                    "large",
+                    "xlarge",
+                    "clove(s)",
+                    "bag(s)",
+                    "box(es)",
+                    "jar(s)",
+                    "package(s)",
+                    "whole",
+                    "head(s)",
+                    "packet(s)",
                   ]
               },
               { label: Ingredient, name: ingredient, widget: string },
+              { label: Note, name: note, widget: string },
+            ]
+        }
+      - {
+          label: Instructions,
+          name: instructions,
+          widget: list,
+          fields:
+            [
+              { label: Instruction, name: instruction, widget: string },
               { label: Note, name: note, widget: string },
             ]
         }
