@@ -171,6 +171,7 @@ collections:
                 label: Unit of Measurement,
                 name: unit,
                 widget: select,
+                required: false,
                 options:
                   [
                     "tsp(s)",
