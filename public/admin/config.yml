@@ -133,7 +133,7 @@ collections:
       - { label: Tags, name: tags, widget: list }
     meta: { path: { widget: string, label: 'Path', index_file: 'index', hint: 'Separate paths with a forward slash "/" (Example: mybook/page-1)' } }
 
-  - label: Cook Book
+  - label: Recipes
     name: recipes
     label_singular: 'Recipe'
     folder: content/recipes
