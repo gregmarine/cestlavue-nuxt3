@@ -213,5 +213,5 @@ collections:
               { label: Note, name: note, widget: string, required: false },
             ]
         }
-      - { label: Notes, name: notes, widget: markdown, required: false }
+      - { label: Notes, name: notes, widget: text, required: false }
       - { label: Tags, name: tags, widget: list }

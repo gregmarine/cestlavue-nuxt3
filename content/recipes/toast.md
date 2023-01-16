@@ -1,7 +1,7 @@
 ---
 title: Toast
 date: 2023-01-11T01:19:36.131Z
-published: false
+published: true
 ingredients:
   - qty: "2"
     unit: slice(s)
@@ -17,7 +17,7 @@ instructions:
   - instruction: Unplug toaster
     note: Safety first!
   - instruction: Enjoy!
-notes: "* Children should be supervised by an adult"
+notes: "Children should be supervised by an adult"
 tags:
   - Food
   - Carbs

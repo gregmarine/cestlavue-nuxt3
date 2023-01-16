@@ -28,7 +28,48 @@
       <Header :title="`${ settings.title }: ${ doc.title }`" />
 
       <div class="px-4 mx-auto h-full max-h-screen overflow-y-auto mb-16 prose dark:prose-invert">
+        <div v-if="doc.featured_image" class="card w-full lg:w-1/2 shadow-xl mb-8">
+          <figure>
+            <img :src="doc.featured_image" :alt="doc.title" />
+          </figure>
+        </div>
+        
         <ContentRenderer :value="doc" class="space-y-8 mb-8" />
+
+        <div tabindex="0" class="collapse collapse-arrow border border-base-300 bg-base-100 rounded-box">
+          <div class="collapse-title text-xl font-medium">
+            Ingredients
+          </div>
+          <div class="collapse-content"> 
+            <ul class="list-none bg-base-100 mb-16">
+              <li v-for="ingredient, i of doc.ingredients" :key="i">
+                {{ ingredient.qty }} {{ ingredient.unit }} {{ ingredient.ingredient }} <span v-if="ingredient.note !== ''">({{ ingredient.note }})</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div tabindex="1" class="collapse collapse-arrow border border-base-300 bg-base-100 rounded-box">
+          <div class="collapse-title text-xl font-medium">
+            Instructions
+          </div>
+          <div class="collapse-content"> 
+            <ol class="list-decimal bg-base-100 mb-16">
+              <li v-for="instruction, i of doc.instructions" :key="i">
+                {{ instruction.instruction }}
+              </li>
+            </ol>
+          </div>
+        </div>
+
+        <div tabindex="2" class="collapse collapse-arrow border border-base-300 bg-base-100 rounded-box">
+          <div class="collapse-title text-xl font-medium">
+            Notes
+          </div>
+          <div class="collapse-content"> 
+            {{ doc.notes }}
+          </div>
+        </div>
       </div>
     </ContentDoc>
   </div>

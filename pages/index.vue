@@ -48,6 +48,17 @@
           <ContentRoll path="pages" :where="{ top_level: true, published: true }" :sort="{ date: -1 }" limit="3" cta_text="Read" />
         </div>
       </ContentDoc>
+
+      <ContentDoc v-if="recipesSettings.landing" :path="recipesSettings._path" v-slot="{ doc }">
+        <div class="container mx-auto overflow-y-auto pt-8">
+          <div class="divider pb-8">
+            <NuxtLink to="/recipes">
+              <button class="btn btn-link">{{ recipesSettings.title }}</button>
+            </NuxtLink>
+          </div>
+          <ContentRoll path="recipes" :where="{ published: true }" :sort="{ date: -1 }" limit="3" cta_text="Make This" />
+        </div>
+      </ContentDoc>
     </div>
   </div>
 </template>
@@ -57,6 +68,7 @@ const settings = await queryContent('/settings/general').findOne();
 const blogSettings = await queryContent('/settings/blog').findOne();
 const gallerySettings = await queryContent('/settings/gallery').findOne();
 const pagesSettings = await queryContent('/settings/pages').findOne();
+const recipesSettings = await queryContent('/settings/recipes').findOne();
 
 useHead({
   title: "Landing Page",
