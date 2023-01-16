@@ -166,7 +166,7 @@ collections:
           summary: '{{qty}} {{unit}} {{ingredient}} ({{note}})',
           fields:
             [
-              { label: Quantity, name: qty, widget: string },
+              { label: Quantity, name: qty, widget: string, required: false },
               {
                 label: Unit of Measurement,
                 name: unit,
