@@ -76,6 +76,18 @@ collections:
           - { label: URL, name: url, widget: hidden, default: "/pages"}
           - { label: Body, name: body, widget: markdown }
 
+      - label: Recipes
+        name: recipes
+        format: frontmatter
+        file: content/settings/recipes.md
+        fields:
+          - { label: Title, name: title, widget: string }
+          - { label: Show in Menu, name: menu, widget: boolean, default: true }
+          - { label: Show on Landing Page, name: landing, widget: boolean, default: true }
+          - { label: Display Order, name: order, widget: number, value_type: int, min: 1, max: 10 }
+          - { label: URL, name: url, widget: hidden, default: "/blog"}
+          - { label: Body, name: body, widget: markdown }
+
   - label: Blog
     name: blog
     label_singular: 'Post'
