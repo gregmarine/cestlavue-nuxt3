@@ -158,7 +158,7 @@ collections:
       - { label: Publish Date, name: date, widget: datetime, required: false }
       - { label: Published, name: published, widget: boolean, required: false, default: false }
       - { label: Featured Image, name: featured_image, widget: image, required: false }
-      - { label: Overview, name: overview, widget: markdown, required: false }
+      - { label: Overview, name: body, widget: markdown }
       - {
           label: Ingredients,
           name: ingredients,
